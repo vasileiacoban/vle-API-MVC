@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vasile's Portfolio Website">
+        <link rel="stylesheet" href="style.css">
+        <title>Consume a RESTful WebAPI </title>
+        <meta name="msapplication-TileColor" content="#51c0de">
+        <meta name="theme-color" content="#51c0de">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <div class="row text-primary text-uppercase" id = "title"><div class="loader">Loading...</div></div>
+        <div class="" id="content"></div>
+    </body>
+
+    <script src="app.js"></script>
+    <script>
+        dataService.authenticate();
+        setTimeout(function(){ dataService.getCustomers(renderer.renderCustomersList); }, 2000);
+    </script>
+
+</html>
